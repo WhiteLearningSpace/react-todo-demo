@@ -1,0 +1,17 @@
+#state-radios {
+  display: flex;
+  color: #545454;
+
+  label {
+    margin: 0 12px;
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked + span {
+    color: #0045ff;
+  }
+}

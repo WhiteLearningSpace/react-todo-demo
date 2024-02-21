@@ -1,0 +1,83 @@
+#todo-list {
+  background-color: #fff;
+  padding: 16px;
+
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+
+
+    label {
+      display: flex;
+      word-wrap: break-word;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    input {
+      display: none;
+    }
+
+    label .text {
+      margin: 0 8px;
+      text-align: left;
+      word-wrap: break-word;
+      overflow: hidden;
+      flex: 1 0;
+    }
+
+    input:checked ~ .text {
+      text-decoration: line-through;
+      color: #999;
+    }
+
+    .checked-mark {
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+
+    .checked-mark::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 1px solid black;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+
+    .checked-mark::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #2580ff;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      scale: 0;
+      transition: scale 280ms;
+    }
+
+    input:checked ~ .checked-mark::after {
+      scale: 0.8;
+      transition: scale 280ms;
+    }
+
+
+    button {
+      background-color: red;
+      border: 1px solid #f0f0f0;
+      padding: 4px 12px;
+      color: white;
+    }
+  }
+
+}
